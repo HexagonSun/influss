@@ -1,3 +1,6 @@
+# Ignore sensitive information/credentials/secrets
+common/credentials
+
 # Logs
 logs
 *.log
