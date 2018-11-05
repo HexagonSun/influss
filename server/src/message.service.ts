@@ -6,7 +6,8 @@ export class MessageService {
 
     }
 
-    public listMessages(date: Date): Array<any> {
+    public listMessages(date: Date): Array<Message> {
+        // TODO: query DB
         return [];
     }
 
