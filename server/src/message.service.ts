@@ -11,4 +11,24 @@ export class MessageService {
         return [];
     }
 
+    public addMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): boolean {
+        // TODO: persist in DB
+        return false;
+    }
+
+    public deleteMessage(id: string): boolean {
+        // TODO: persist in DB
+        return false;
+    }
+
+    private fetch(id: string): Message {
+        // TODO: fetch from DB
+        return undefined;
+    }
+
+    private update(id: string): Message {
+        // TODO: fetch from DB
+        return undefined;
+    }
+
 }
