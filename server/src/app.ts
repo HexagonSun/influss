@@ -1,11 +1,13 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import { Routes } from "./routes/Routes";
+import { Routes } from "./Routes";
+import { MessageService } from "./message.service";
 
 class App {
 
     public app: express.Application;
-    public routes: Routes = new Routes();
+    public messageService: MessageService = new MessageService();
+    public routes: Routes = new Routes(this.messageService);
 
     constructor() {
         this.app = express();
