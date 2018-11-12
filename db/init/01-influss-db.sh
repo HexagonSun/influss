@@ -50,6 +50,13 @@ init_user_and_db() {
      CREATE USER $INFLUSS_DB_USER WITH PASSWORD '$INFLUSS_DB_PASSWORD';
      CREATE DATABASE $INFLUSS_DB_DATABASE;
      GRANT ALL PRIVILEGES ON DATABASE $INFLUSS_DB_DATABASE TO $INFLUSS_DB_USER;
+
+     -- https://www.postgresql.org/docs/9.3/ddl-schemas.html
+     -- restrict/remove access on public schema
+     REVOKE CREATE ON SCHEMA public FROM PUBLIC;
+
+     -- set default search path to the one-and-only schema we use
+     ALTER ROLE $INFLUSS_DB_USER SET search_path = '"$INFLUSS_DB_DATABASE"';
 EOSQL
 }
 
