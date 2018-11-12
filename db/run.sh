@@ -9,6 +9,7 @@ print_title $MODULE_NAME
 
 
 IMAGE_NAME="influss/db"
+CONTAINER_NAME="influss_db"
 INFLUSS_DB_DATABASE="influss"
 
 check_env INFLUSS_COMMON_DB_USER $INFLUSS_COMMON_DB_USER
@@ -22,7 +23,7 @@ docker run -i -t \
     --env "INFLUSS_DB_DATABASE=${INFLUSS_DB_DATABASE}" \
     --env "POSTGRES_USER=${INFLUSS_COMMON_DB_POSTGRES_USER}" \
     --publish 5432:5432 \
-    --name "influss_db" \
+    --name $CONTAINER_NAME \
     ${IMAGE_NAME}
 
 print_exit $MODULE_NAME
