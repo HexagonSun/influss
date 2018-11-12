@@ -1,6 +1,9 @@
 # Ignore sensitive information/credentials/secrets
 common/credentials
 
+# gradle intermediate files
+.gradle
+
 # Logs
 logs
 *.log
