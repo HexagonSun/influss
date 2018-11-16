@@ -1,35 +1,41 @@
 import {Request, Response} from "express";
 import {Message} from "./message.model";
+import {MessageRepository} from "./message-repository.service";
 
 export class MessageService {
 
-    constructor() {
+    constructor(private repository: MessageRepository) {
 
     }
 
     public listMessages(date: Date): Promise<Array<Message>> {
-        // TODO: query DB
-        return Promise.resolve([]);
+        return this.repository.fetchAll(date);
     }
 
-    public addMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): Promise<boolean> {
-        // TODO: persist in DB
-        return Promise.resolve(false);
+    public addMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): Promise<Message> {
+        const msg: Message= this.createMessage(text, validFrom, invalidFrom, author)
+        return this.repository.add(msg);
     }
 
     public deleteMessage(id: number): Promise<boolean> {
-        // TODO: persist in DB
-        return Promise.resolve(false);
+        return this.repository.delete(id);
     }
 
     private fetch(id: number): Promise<Message> {
-        // TODO: fetch from DB
-        return Promise.resolve(undefined);
+        return this.repository.fetch(id);
     }
 
     private update(id: number): Promise<Message> {
-        // TODO: fetch from DB
-        return Promise.resolve(undefined);
+        return this.repository.update(id);
+    }
+
+    private createMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): Message {
+        return <Message> {
+            text: text,
+            validFrom: validFrom,
+            invalidFrom: invalidFrom,
+            author: author,
+        }
     }
 
 }
