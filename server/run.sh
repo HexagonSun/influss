@@ -1,0 +1,31 @@
+#!/bin/bash
+
+MODULE_NAME="server"
+
+source ${BASH_SOURCE%/*}/../common/common.sh
+
+print_title $MODULE_NAME
+
+
+IMAGE_NAME="influss/server"
+CONTAINER_NAME="influss_server"
+
+# IP given to the docker container of the DB
+DB_HOST=172.17.0.2
+
+check_env INFLUSS_COMMON_DB_USER $INFLUSS_COMMON_DB_USER
+check_env INFLUSS_COMMON_DB_PASSWORD $INFLUSS_COMMON_DB_PASSWORD
+check_env INFLUSS_COMMON_DB_SCHEMA_NAME $INFLUSS_COMMON_DB_SCHEMA_NAME
+check_env INFLUSS_COMMON_DB_PORT $INFLUSS_COMMON_DB_PORT
+
+docker run -i -t \
+	--env "INFLUSS_COMMON_DB_HOST=${DB_HOST}" \
+    --env "INFLUSS_COMMON_DB_USER=${INFLUSS_COMMON_DB_USER}" \
+    --env "INFLUSS_COMMON_DB_PASSWORD=${INFLUSS_COMMON_DB_PASSWORD}" \
+    --env "INFLUSS_COMMON_DB_SCHEMA_NAME=${INFLUSS_COMMON_DB_SCHEMA_NAME}" \
+    --env "INFLUSS_COMMON_DB_PORT=${INFLUSS_COMMON_DB_PORT}" \
+    --publish 5005:5005 \
+    --name $CONTAINER_NAME \
+    ${IMAGE_NAME}
+
+print_exit $MODULE_NAME
