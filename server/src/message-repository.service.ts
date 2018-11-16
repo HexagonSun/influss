@@ -27,8 +27,14 @@ export class MessageRepository {
     }
 
     public fetch(id: number): Promise<Message> {
-        // TODO: fetch from DB
-        return Promise.resolve(undefined);
+        const query = {
+          text: 'SELECT * FROM MESSAGE WHERE id = ($1)',
+          values: [ id ],
+        }
+
+        return this.pool.query(query)
+          .then(res => Promise.resolve(this.convertRows(res.rows)))
+          .catch(e => console.error(e.stack));
     }
 
     public update(id: number): Promise<Message> {

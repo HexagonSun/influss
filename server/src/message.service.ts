@@ -12,6 +12,10 @@ export class MessageService {
         return this.repository.fetchAll(date);
     }
 
+    public listMessage(id: number): Promise<Message> {
+        return this.repository.fetch(id);
+    }
+
     public addMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): Promise<Message> {
         const msg: Message= this.createMessage(text, validFrom, invalidFrom, author)
         return this.repository.add(msg);

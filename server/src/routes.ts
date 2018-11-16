@@ -11,10 +11,15 @@ export class Routes {
         app.route('/ping').get((req: Request, res: Response) => this.ok(res));
 
         app.route('/messages').get((req: Request, res: Response) => this.sendResponse(res, this.listMessages()));
+        app.route('/messages/:id').get((req: Request, res: Response) => this.sendResponse(res, this.listMessage(req.params.id)));
     }
 
     private listMessages(): Promise<any> {
         return this.messageService.listMessages(new Date());
+    }
+
+    private listMessage(id: number): Promise<any> {
+        return this.messageService.listMessage(id);
     }
 
     private ok(res: Response): void {
