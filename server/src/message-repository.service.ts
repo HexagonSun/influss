@@ -2,17 +2,15 @@ import {Pool} from 'pg';
 import {Message} from "./message.model";
 
 export class MessageRepository {
-
     private pool:Pool = new Pool({
       user: process.env.INFLUSS_COMMON_DB_USER,
-      host: 'localhost',
+      host: process.env.INFLUSS_COMMON_DB_HOST,
       database: process.env.INFLUSS_COMMON_DB_SCHEMA_NAME,
       password: process.env.INFLUSS_COMMON_DB_PASSWORD,
       port: process.env.INFLUSS_COMMON_DB_PORT,
     });
 
     constructor() {
-
     }
 
     public fetchAll(date: Date): Promise<Array<Message>> {
