@@ -16,8 +16,14 @@ export class MessageRepository {
     }
 
     public fetchAll(date: Date): Promise<Array<Message>> {
-        // TODO: fetch from DB
-        return Promise.resolve([]);
+        const query = {
+          text: 'SELECT * FROM MESSAGE WHERE valid_from <= ($1) and invalid_from > ($1)',
+          values: [ date ],
+        }
+
+        return this.pool.query(query)
+          .then(res => Promise.resolve(this.convertRows(res.rows)))
+          .catch(e => console.error(e.stack));
     }
 
     public fetch(id: number): Promise<Message> {
@@ -38,6 +44,26 @@ export class MessageRepository {
     public add(msg: Message): Promise<Message> {
         // TODO: create in DB
         return Promise.resolve(msg);
+    }
+
+    private handleResult(error, result): Array<Message> | undefined {
+      if(error) {
+         console.log(error);
+         return undefined;
+      }
+      return this.convertRows(result.rows);
+    }
+
+    private convertRows(rows: Array<any>): Array<Message> {
+      const data = [];
+      for (let row of rows) {
+        data.push(this.convertToMessage(row));
+      }
+      return data;
+    }
+
+    private convertToMessage(row: any): Message {
+      return <Message>row;
     }
 
 }
