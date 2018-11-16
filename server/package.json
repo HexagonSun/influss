@@ -13,7 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16.4"
+    "express": "4.16.4",
+    "pg-ts": "9.0.3"
   },
   "devDependencies": {
     "@types/express": "4.16.0",
