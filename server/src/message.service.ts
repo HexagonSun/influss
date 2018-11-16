@@ -1,4 +1,5 @@
 import {Request, Response} from "express";
+import {Message} from "./message.model";
 
 export class MessageService {
 
@@ -6,29 +7,29 @@ export class MessageService {
 
     }
 
-    public listMessages(date: Date): Array<Message> {
+    public listMessages(date: Date): Promise<Array<Message>> {
         // TODO: query DB
-        return [];
+        return Promise.resolve([]);
     }
 
-    public addMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): boolean {
+    public addMessage(text: string, validFrom: Date, invalidFrom: Date, author: string): Promise<boolean> {
         // TODO: persist in DB
-        return false;
+        return Promise.resolve(false);
     }
 
-    public deleteMessage(id: number): boolean {
+    public deleteMessage(id: number): Promise<boolean> {
         // TODO: persist in DB
-        return false;
+        return Promise.resolve(false);
     }
 
-    private fetch(id: number): Message {
+    private fetch(id: number): Promise<Message> {
         // TODO: fetch from DB
-        return undefined;
+        return Promise.resolve(undefined);
     }
 
-    private update(id: number): Message {
+    private update(id: number): Promise<Message> {
         // TODO: fetch from DB
-        return undefined;
+        return Promise.resolve(undefined);
     }
 
 }
