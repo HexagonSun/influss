@@ -16,17 +16,17 @@ export class MessageService {
         return false;
     }
 
-    public deleteMessage(id: string): boolean {
+    public deleteMessage(id: number): boolean {
         // TODO: persist in DB
         return false;
     }
 
-    private fetch(id: string): Message {
+    private fetch(id: number): Message {
         // TODO: fetch from DB
         return undefined;
     }
 
-    private update(id: string): Message {
+    private update(id: number): Message {
         // TODO: fetch from DB
         return undefined;
     }

@@ -1,5 +1,5 @@
-interface Message {
-    readonly id: string,
+export interface Message {
+    readonly id: number,
     readonly text: string,
     readonly validFrom: Date,
     readonly invalidFrom: Date,
