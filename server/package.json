@@ -6,9 +6,9 @@
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
     "compile": "tsc",
-    "prepare-env": "cp ../common/credentials/db.sh dist/db.env",
+    "prepare-env": "cp ../common/credentials/db.env dist/",
     "build": "npm run clean && npm run prepare-env && npm run compile",
-    "dev": "nodenv --env ../common/credentials/db.sh ./src/server.ts --exec 'ts-node'",
+    "dev": "nodenv --env ../common/credentials/db.env ./src/server.ts --exec 'ts-node'",
     "start": "nodenv --env ./dist/db.env ./dist/server.js",
     "prod": "npm run build && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"

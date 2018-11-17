@@ -3,11 +3,11 @@ import {Message} from "./message.model";
 
 export class MessageRepository {
     private pool:Pool = new Pool({
-      user: process.env.INFLUSS_COMMON_DB_USER,
-      host: process.env.INFLUSS_COMMON_DB_HOST,
-      database: process.env.INFLUSS_COMMON_DB_SCHEMA_NAME,
-      password: process.env.INFLUSS_COMMON_DB_PASSWORD,
-      port: process.env.INFLUSS_COMMON_DB_PORT,
+      host: process.env.INFLUSS_DB_HOST,
+      port: process.env.INFLUSS_DB_PORT,
+      database: process.env.INFLUSS_DB_DATABASE,
+      user: process.env.INFLUSS_DB_USER,
+      password: process.env.INFLUSS_DB_PASSWORD,
     });
 
     constructor() {

@@ -2,7 +2,7 @@ FROM node:8.12.0-alpine
 WORKDIR /app
 
 # dependencies
-# COPY ../common/credentials/db.sh ./db.env
+# COPY ../common/credentials/db.env .
 
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
