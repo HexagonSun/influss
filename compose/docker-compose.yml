@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    build:
+      context: ./../db/
+    ports:
+       - "5432:5432"
+    env_file: ./../common/credentials/db.env
+  server:
+    build:
+      context: ./../server/
+    depends_on:
+      - db
+    ports:
+       - "5555:5005"
+    env_file: ./../common/credentials/db.env
+    environment:
+        INFLUSS_DB_HOST: db
+        INFLUSS_DB_PORT: 5432
