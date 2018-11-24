@@ -1,3 +1,4 @@
+import { Message } from './message.model';
 import { MessageHttpService } from './messageHttp.service';
 
 export class MessageService {
@@ -9,9 +10,9 @@ export class MessageService {
     }
 
     public getMessages(): void {
-        let messages: Array<string>;
+        let messages: Array<Message>;
         this.messageHttpService.getMessages()
-            .then((data: Array<string>) => messages = [...data])
+            .then((data: Array<Message>) => messages = [...data])
             .catch((err: Error) => {
                 console.log('Error fetching messages');
             });
