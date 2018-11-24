@@ -1,2 +1,3 @@
-// TODO: implement
-console.log('TODO: implement');
+import { InflussClient } from './influssClient';
+
+new InflussClient(document, console).init();
