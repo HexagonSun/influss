@@ -1,0 +1,31 @@
+{
+  "name": "influss-client-web-typescript",
+  "version": "0.1.0",
+  "description": "Web-client for InFluss, written in typescript",
+  "author": "Hexagon Sun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HexagonSun/influss"
+  },
+  "scripts": {
+    "start": "npm run serve",
+    "lint": "npm run tslint",
+    "build-static": "npm run copy-static",
+    "build-prepare": "npm run lint && npm run build-static",
+    "build": "npm run build-prepare && npm run build-ts",
+    "serve": "node dist/influss-client-web-typescript.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint --project tsconfig.json --format stylish",
+    "copy-static": "copyfiles --up 2 src/resources/* dist",
+    "copy-static-lib": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "10.12.9",
+    "@types/node-fetch": "2.1.4",
+    "copyfiles": "2.0.0",
+    "tslint": "5.11.0",
+    "typescript": "3.0.1"
+  }
+}
