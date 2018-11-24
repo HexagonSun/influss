@@ -9,6 +9,7 @@
     "array-type": [true, "generic"],
     "no-inferrable-types": false,
     "no-unnecessary-class": false,
-    "quotemark": [true, "single"]
+    "quotemark": [true, "single"],
+    "interface-name": [false]
   }
 }
