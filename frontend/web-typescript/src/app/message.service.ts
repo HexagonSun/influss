@@ -11,7 +11,10 @@ export class MessageService {
     public getMessages(): void {
         let messages: Array<string>;
         this.messageHttpService.getMessages()
-            .then(data => messages = [...data]);
+            .then((data: Array<string>) => messages = [...data])
+            .catch((err: Error) => {
+                console.log('Error fetching messages');
+            });
     }
 
 }

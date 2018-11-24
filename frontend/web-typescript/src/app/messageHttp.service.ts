@@ -1,9 +1,7 @@
-
-export class MessageHttpService {
+export class MessageHttpService extends HttpService {
 
     public async getMessages(): Promise<Array<string>> {
-        return fetch('http://localhost:5555/messages')
-          .then((res: Response) => res.json())
+        return this.api('http://localhost:5555/messages')
           .then((res: Array<string>) => {
               console.log('Received data from backend: ', res);
 
