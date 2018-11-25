@@ -11,6 +11,7 @@ export class Renderer {
     private readonly looper: Looper;
 
     private messages: Array<Message>;
+    private index: number = 0;
 
     public constructor(document: Document) {
         this.document = document;
@@ -23,11 +24,34 @@ export class Renderer {
         });
     }
 
+    public updateMessages(messages: Array<Message>): void {
+        this.messages = [...messages];
+    }
+
     private processTick(): void {
         console.log('process Tick');
-        this.messages = [];
-
+        this.updateMessage();
         this.updateFooter();
+    }
+
+    private updateMessage(): void {
+        if (this.messages.length === 0) {
+            // Nothing to do;
+            this.index = 0;
+
+            return;
+        }
+
+        this.index = this.index >= this.messages.length ? 0 : this.index + 1;
+        const messageText: string = this.messages[this.index].text;
+
+        const oldMessage: Element = this.message.children[0];
+
+        const message: HTMLElement = this.document.createElement('div');
+        message.className = 'message';
+        message.innerHTML = messageText;
+
+        this.message.replaceChild(message, oldMessage);
     }
 
     private updateFooter(): void {
@@ -35,7 +59,8 @@ export class Renderer {
 
         const total: HTMLElement = this.document.createElement('div');
         total.className = 'total';
-        total.innerHTML = `? / ${this.messages.length}`;
+        const index: string = this.messages.length === 0 ? '–' : `${this.index}`;
+        total.innerHTML = `${index} / ${this.messages.length}`;
 
         this.footer.replaceChild(total, oldTotal);
     }
