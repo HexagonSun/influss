@@ -9,13 +9,8 @@ export class MessageService {
         this.messageHttpService = new MessageHttpService();
     }
 
-    public getMessages(): void {
-        let messages: Array<Message>;
-        this.messageHttpService.getMessages()
-            .then((data: Array<Message>) => messages = [...data])
-            .catch((err: Error) => {
-                console.log('Error fetching messages');
-            });
+    public async getMessages(): Promise<Array<Message>> {
+        return this.messageHttpService.getMessages();
     }
 
 }
