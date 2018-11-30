@@ -27,4 +27,7 @@ services:
     ports:
        - "8000:80"
     env_file: ./../common/credentials/db.env
-
+    environment:
+        INFLUSS_SERVER_EXTERNAL_API_HOST: localhost
+        INFLUSS_SERVER_EXTERNAL_API_PORT: 7700
+        INFLUSS_FRONTEND_1_PORT: 7701
