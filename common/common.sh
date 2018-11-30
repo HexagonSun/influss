@@ -22,10 +22,15 @@ function print_title() {
 function print_exit() {
 	local module_name=$1
 
+	local plain_title="${module_name} finished, exiting."
+	local title_len=${#plain_title}
+
 	echo
-	echo "--------------------------"
+	printf -- '-%.0s' $(seq 1 ${title_len})
+	echo
 	echo -e "$(green ${module_name}) finished, exiting."
-	echo "--------------------------"
+	printf -- '-%.0s' $(seq 1 ${title_len})
+	echo
 }
 
 function check_env() {
