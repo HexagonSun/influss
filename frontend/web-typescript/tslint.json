@@ -10,6 +10,12 @@
     "no-inferrable-types": false,
     "no-unnecessary-class": false,
     "quotemark": [true, "single"],
-    "interface-name": [false]
+    "interface-name": [false],
+    "strict-boolean-expressions": [
+        true,
+        "allow-undefined-union",
+        "allow-string",
+        "allow-number"
+    ]
   }
 }
