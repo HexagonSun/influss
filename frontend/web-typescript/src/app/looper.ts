@@ -12,8 +12,8 @@ export class Looper {
 
     private readonly loop = async (interval: number, callback: () => void): Promise<void> => {
         while (true) {
-            await this.wait(interval);
             callback();
+            await this.wait(interval);
         }
     }
 
