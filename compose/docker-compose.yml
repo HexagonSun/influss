@@ -6,6 +6,7 @@ services:
     ports:
        - "5432:5432"
     env_file: ./../common/credentials/db.env
+
   server:
     build:
       context: ./../server/
@@ -17,3 +18,13 @@ services:
     environment:
         INFLUSS_DB_HOST: db
         INFLUSS_DB_PORT: 5432
+
+  frontend-web-typescript:
+    build:
+      context: ./../frontend/web-typescript/
+    depends_on:
+      - server
+    ports:
+       - "8000:80"
+    env_file: ./../common/credentials/db.env
+
