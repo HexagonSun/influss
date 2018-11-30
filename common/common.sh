@@ -9,9 +9,14 @@ function green() {
 function print_title() {
 	local module_name=$1
 
-	echo "--------------------------"
+	local plain_title="----- ${APPLICATION_TITLE} --- ${module_name} -----"
+	local title_len=${#plain_title}
+
+	printf -- '-%.0s' $(seq 1 ${title_len})
+	echo
 	echo -e "----- $(green ${APPLICATION_TITLE}) --- $(green ${module_name}) -----"
-	echo "--------------------------"
+	printf -- '-%.0s' $(seq 1 ${title_len})
+	echo
 }
 
 function print_exit() {
