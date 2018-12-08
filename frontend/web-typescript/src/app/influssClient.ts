@@ -3,6 +3,9 @@ import { Message } from './message.model';
 import { MessageService } from './message.service';
 import { Renderer } from './renderer';
 
+// Global variables from index.html
+declare var INFLUSS_API_KEY: string;
+
 export class InflussClient {
 
     private readonly document: Document;
@@ -25,9 +28,16 @@ export class InflussClient {
 
     public init(): void {
         this.console.log('Initializing InflussClient');
+        this.checkApiKey();
         this.looper = new Looper(this.fetchInterval, (): void => {
             this.processMessages();
         });
+    }
+
+    private readonly checkApiKey = (): void => {
+        if (INFLUSS_API_KEY === undefined || INFLUSS_API_KEY === null) {
+            INFLUSS_API_KEY = prompt('Enter key', '');
+        }
     }
 
     private processMessages(): void {

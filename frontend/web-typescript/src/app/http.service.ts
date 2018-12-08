@@ -1,6 +1,7 @@
 // Global variables from index.html
 declare var INFLUSS_API_HOST: string;
 declare var INFLUSS_API_PORT: string;
+declare var INFLUSS_API_KEY: string;
 
 class HttpService {
 
@@ -9,7 +10,7 @@ class HttpService {
   private readonly API_PORT: number = parseInt(INFLUSS_API_PORT, 10) || this.DEFAULT_PORT;
 
   protected api = async <T extends {}>(path: string): Promise<T> =>
-    fetch(this.fromPath(path))
+    fetch(this.buildRequest(this.fromPath(path)))
       .then(async (response: Response): Promise<T> => {
         if (!response.ok) {
           throw new Error(response.statusText);
@@ -22,6 +23,12 @@ class HttpService {
         console.error(error);
         throw error;
       })
+
+  private readonly buildRequest = (url: string): Request => new Request(url, {
+    headers: new Headers({
+      'X-INFLUSS-API': INFLUSS_API_KEY,
+    }),
+  })
 
   private readonly fromPath = (path: string): string => `${this.baseUrl()}${path}`;
 
