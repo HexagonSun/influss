@@ -14,6 +14,7 @@
     "build-static": "npm run copy-static",
     "build-prepare": "npm run lint && npm run build-static",
     "build": "npm run build-prepare && npm run build-ts",
+    "build-ci": "npm run build",
     "serve": "node dist/influss-client-web-typescript.js",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
