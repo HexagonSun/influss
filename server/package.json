@@ -2,7 +2,11 @@
   "name": "influss-server",
   "version": "0.1.0",
   "description": "Backend for InFluss",
-  "main": "index.js",
+  "author": "Hexagon Sun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HexagonSun/influss"
+  },
   "scripts": {
     "clean": "rm -rf dist && mkdir dist",
     "compile": "tsc",
