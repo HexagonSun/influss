@@ -1,18 +1,21 @@
 FROM node:8.12.0-alpine
 WORKDIR /app
 
-# dependencies
-# COPY ../common/credentials/db.env .
 
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
 
-# build
-RUN npm install --only=production
+# npm dependencies
+RUN npm install 
 
-# Bundle js source/dist folder
-COPY dist ./
+# copy other config & sources
+COPY tsconfig.json ./
+COPY src ./src
+
+# build
+RUN npm run build-ci
+RUN cp dist/* .
 
 EXPOSE 5005
 CMD [ "node", "server.js" ]

@@ -12,6 +12,7 @@
     "compile": "tsc",
     "prepare-env": "cp ../common/credentials/db.env dist/",
     "build": "npm run clean && npm run prepare-env && npm run compile",
+    "build-ci": "npm run clean && npm run compile",
     "dev": "nodenv --env ../common/credentials/db.env ./src/server.ts --exec 'ts-node'",
     "start": "nodenv --env ./dist/db.env ./dist/server.js",
     "prod": "npm run build && npm run start",
