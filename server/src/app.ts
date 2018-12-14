@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import { Routes } from "./Routes";
+import { Routes } from "./routes";
 import {MessageRepository} from "./message-repository.service";
 import { MessageService } from "./message.service";
 
