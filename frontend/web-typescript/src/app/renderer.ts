@@ -32,19 +32,17 @@ export class Renderer {
         console.log('process Tick');
         this.updateMessage();
         this.updateFooter();
+
+        this.index = this.getNextIndex();
     }
 
     private updateMessage(): void {
         if (this.messages.length === 0) {
             // Nothing to do;
-            this.index = 0;
-
             return;
         }
 
-        this.index = this.index >= this.messages.length ? 0 : this.index + 1;
         const messageText: string = this.messages[this.index].text;
-
         const oldMessage: Element = this.message.children[0];
 
         const message: HTMLElement = this.document.createElement('div');
@@ -59,10 +57,17 @@ export class Renderer {
 
         const total: HTMLElement = this.document.createElement('div');
         total.className = 'total';
-        const index: string = this.messages.length === 0 ? '–' : `${this.index}`;
+        const index: string = this.messages.length === 0 ? '–' : `${this.index + 1}`;
         total.innerHTML = `${index} / ${this.messages.length}`;
 
         this.footer.replaceChild(total, oldTotal);
     }
 
+    private getNextIndex(): number {
+        if (this.messages.length === 0) {
+            return 0;
+        }
+
+        return (this.index + 1) % this.messages.length;
+    }
 }
