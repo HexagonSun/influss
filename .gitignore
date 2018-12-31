@@ -4,6 +4,16 @@ common/credentials
 # gradle intermediate files
 .gradle
 
+# XCode / Swift
+## Build generated
+build/*
+DerivedData
+## Various settings
+*.pbxuser
+xcuserdata
+## misc
+.DS_Store
+
 # Logs
 logs
 *.log
