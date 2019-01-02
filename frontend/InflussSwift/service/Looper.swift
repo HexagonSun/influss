@@ -5,9 +5,9 @@ protocol LooperDelegate {
 }
 
 class Looper {
-    let timer: Timer
     let intervalSeconds: TimeInterval
     let delegate: LooperDelegate
+    var timer: Timer!
     
     init(_ intervalSeconds: TimeInterval, _ delegate: LooperDelegate) {
         self.intervalSeconds = intervalSeconds
