@@ -16,6 +16,11 @@
 		586E385321DA2308005943DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 586E385221DA2308005943DB /* Assets.xcassets */; };
 		586E385621DA2308005943DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586E385421DA2308005943DB /* Main.storyboard */; };
 		58A406FF21DF7C74002AE755 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A406FE21DF7C74002AE755 /* ViewHandler.swift */; };
+		58A4070721DF83E6002AE755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4070621DF83E6002AE755 /* AppDelegate.swift */; };
+		58A4070921DF83E6002AE755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4070821DF83E6002AE755 /* ViewController.swift */; };
+		58A4070C21DF83E6002AE755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070A21DF83E6002AE755 /* Main.storyboard */; };
+		58A4070E21DF83E7002AE755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070D21DF83E7002AE755 /* Assets.xcassets */; };
+		58A4071121DF83E7002AE755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +36,24 @@
 		586E385721DA2308005943DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586E385821DA2308005943DB /* InflussSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InflussSwift.entitlements; sourceTree = "<group>"; };
 		58A406FE21DF7C74002AE755 /* ViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHandler.swift; sourceTree = "<group>"; };
+		58A4070421DF83E6002AE755 /* InflussSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InflussSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A4070621DF83E6002AE755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		58A4070821DF83E6002AE755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58A4070B21DF83E6002AE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		58A4070D21DF83E7002AE755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58A4071021DF83E7002AE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		58A4071221DF83E7002AE755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		586E384821DA2307005943DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A4070121DF83E6002AE755 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,6 +80,7 @@
 			children = (
 				580B26B821DC0D2500B97ED0 /* service */,
 				586E384D21DA2307005943DB /* InflussSwift */,
+				58A4070521DF83E6002AE755 /* InflussSwiftApp */,
 				586E384C21DA2307005943DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				586E384B21DA2307005943DB /* InflussSwift.app */,
+				58A4070421DF83E6002AE755 /* InflussSwiftApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +105,19 @@
 				586E385821DA2308005943DB /* InflussSwift.entitlements */,
 			);
 			path = InflussSwift;
+			sourceTree = "<group>";
+		};
+		58A4070521DF83E6002AE755 /* InflussSwiftApp */ = {
+			isa = PBXGroup;
+			children = (
+				58A4070621DF83E6002AE755 /* AppDelegate.swift */,
+				58A4070821DF83E6002AE755 /* ViewController.swift */,
+				58A4070A21DF83E6002AE755 /* Main.storyboard */,
+				58A4070D21DF83E7002AE755 /* Assets.xcassets */,
+				58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */,
+				58A4071221DF83E7002AE755 /* Info.plist */,
+			);
+			path = InflussSwiftApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +140,23 @@
 			productReference = 586E384B21DA2307005943DB /* InflussSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
+		58A4070321DF83E6002AE755 /* InflussSwiftApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58A4071521DF83E7002AE755 /* Build configuration list for PBXNativeTarget "InflussSwiftApp" */;
+			buildPhases = (
+				58A4070021DF83E6002AE755 /* Sources */,
+				58A4070121DF83E6002AE755 /* Frameworks */,
+				58A4070221DF83E6002AE755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InflussSwiftApp;
+			productName = InflussSwiftApp;
+			productReference = 58A4070421DF83E6002AE755 /* InflussSwiftApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -124,6 +175,9 @@
 							};
 						};
 					};
+					58A4070321DF83E6002AE755 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 586E384621DA2307005943DB /* Build configuration list for PBXProject "InflussSwift" */;
@@ -140,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				586E384A21DA2307005943DB /* InflussSwift */,
+				58A4070321DF83E6002AE755 /* InflussSwiftApp */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +206,16 @@
 			files = (
 				586E385321DA2308005943DB /* Assets.xcassets in Resources */,
 				586E385621DA2308005943DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58A4070221DF83E6002AE755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A4071121DF83E7002AE755 /* LaunchScreen.storyboard in Resources */,
+				58A4070E21DF83E7002AE755 /* Assets.xcassets in Resources */,
+				58A4070C21DF83E6002AE755 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +236,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58A4070021DF83E6002AE755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58A4070921DF83E6002AE755 /* ViewController.swift in Sources */,
+				58A4070721DF83E6002AE755 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -180,6 +254,22 @@
 				586E385521DA2308005943DB /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		58A4070A21DF83E6002AE755 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58A4070B21DF83E6002AE755 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58A4071021DF83E7002AE755 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,6 +426,51 @@
 			};
 			name = Release;
 		};
+		58A4071321DF83E7002AE755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = InflussSwiftApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hexagon.sun.influss.swift.InflussSwiftApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58A4071421DF83E7002AE755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = InflussSwiftApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.hexagon.sun.influss.swift.InflussSwiftApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,6 +488,15 @@
 			buildConfigurations = (
 				586E385C21DA2308005943DB /* Debug */,
 				586E385D21DA2308005943DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58A4071521DF83E7002AE755 /* Build configuration list for PBXNativeTarget "InflussSwiftApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A4071321DF83E7002AE755 /* Debug */,
+				58A4071421DF83E7002AE755 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
