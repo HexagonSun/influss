@@ -19,7 +19,6 @@
 		58A4070721DF83E6002AE755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4070621DF83E6002AE755 /* AppDelegate.swift */; };
 		58A4070921DF83E6002AE755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4070821DF83E6002AE755 /* ViewController.swift */; };
 		58A4070C21DF83E6002AE755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070A21DF83E6002AE755 /* Main.storyboard */; };
-		58A4070E21DF83E7002AE755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070D21DF83E7002AE755 /* Assets.xcassets */; };
 		58A4071121DF83E7002AE755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */; };
 		58B53DAA21DFA2E4001D87D5 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26B921DC0D4800B97ED0 /* MessageService.swift */; };
 		58B53DAB21DFA2E4001D87D5 /* InflussClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26BB21DC0DE500B97ED0 /* InflussClient.swift */; };
@@ -45,7 +44,6 @@
 		58A4070621DF83E6002AE755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A4070821DF83E6002AE755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58A4070B21DF83E6002AE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		58A4070D21DF83E7002AE755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58A4071021DF83E7002AE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58A4071221DF83E7002AE755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +81,7 @@
 		586E384221DA2307005943DB = {
 			isa = PBXGroup;
 			children = (
+				58B53DAF21DFA8BA001D87D5 /* assets */,
 				580B26B821DC0D2500B97ED0 /* service */,
 				586E384D21DA2307005943DB /* InflussSwift */,
 				58A4070521DF83E6002AE755 /* InflussSwiftApp */,
@@ -104,7 +103,6 @@
 			children = (
 				586E384E21DA2307005943DB /* AppDelegate.swift */,
 				586E385021DA2307005943DB /* ViewController.swift */,
-				586E385221DA2308005943DB /* Assets.xcassets */,
 				586E385421DA2308005943DB /* Main.storyboard */,
 				586E385721DA2308005943DB /* Info.plist */,
 				586E385821DA2308005943DB /* InflussSwift.entitlements */,
@@ -118,11 +116,18 @@
 				58A4070621DF83E6002AE755 /* AppDelegate.swift */,
 				58A4070821DF83E6002AE755 /* ViewController.swift */,
 				58A4070A21DF83E6002AE755 /* Main.storyboard */,
-				58A4070D21DF83E7002AE755 /* Assets.xcassets */,
 				58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */,
 				58A4071221DF83E7002AE755 /* Info.plist */,
 			);
 			path = InflussSwiftApp;
+			sourceTree = "<group>";
+		};
+		58B53DAF21DFA8BA001D87D5 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				586E385221DA2308005943DB /* Assets.xcassets */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				58A4071121DF83E7002AE755 /* LaunchScreen.storyboard in Resources */,
-				58A4070E21DF83E7002AE755 /* Assets.xcassets in Resources */,
 				58A4070C21DF83E6002AE755 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
