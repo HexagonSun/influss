@@ -1,5 +1,4 @@
-//import Foundation
-import Cocoa
+import Foundation
 
 protocol ViewLabels {
     func setMessage(_ text: String)
