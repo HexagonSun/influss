@@ -5,16 +5,11 @@ class InflussClient {
     let fetchDelay: TimeInterval = 5
 
     var messages: [Message] = []
-    var looper: Looper!
+    var messageFetcher: Looper!
 
     init() {
         messageService = MessageService()
-        looper = Looper(self.fetchDelay, self)
-    }
-
-    func processTick() {
-        print("processing tick")
-        messageService.getMessages(withCompletion: processMessages)
+        messageFetcher = Looper(self.fetchDelay, self)
     }
     
     func processMessages(messages: [Message]?) {
@@ -28,6 +23,6 @@ class InflussClient {
 
 extension InflussClient: LooperDelegate {
     func apply() {
-        self.processTick()
+        messageService.getMessages(withCompletion: processMessages)
     }
 }
