@@ -12,7 +12,7 @@ struct Message : Codable {
     let deleted: String
     
     func isDeleted() -> Bool {
-        return "0" == deleted
+        return "1" == deleted
     }
 
 }
