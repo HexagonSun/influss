@@ -2,9 +2,9 @@ import Foundation
 
 class InflussClient {
     let messageService: MessageService
-    let messages: [Message] = []
     let fetchDelay: TimeInterval = 5
 
+    var messages: [Message] = []
     var looper: Looper!
 
     init() {
@@ -22,12 +22,7 @@ class InflussClient {
             // no messages available
             return
         }
-        
-        // TODO: acutally update messages
-        print("Received messages from backend:")
-        for msg in messages {
-            print("\t*** \(msg)")
-        }
+        self.messages = messages.filter { !$0.isDeleted() }
     }
 }
 
