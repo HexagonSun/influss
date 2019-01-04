@@ -144,7 +144,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ch-KVK">
-                                <rect key="frame" x="-2" y="0.0" width="454" height="17"/>
+                                <rect key="frame" x="-2" y="5" width="454" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="wix-ba-pCM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -156,7 +156,7 @@
                             <constraint firstAttribute="trailing" secondItem="ima-ch-KVK" secondAttribute="trailing" id="12Y-4g-cxp"/>
                             <constraint firstItem="ima-ch-KVK" firstAttribute="leading" secondItem="DnU-HG-Dtl" secondAttribute="leading" id="3TA-qR-hPf"/>
                             <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerY" secondItem="hwc-lG-u9Z" secondAttribute="centerY" id="8Uu-Sj-1KK"/>
-                            <constraint firstAttribute="bottom" secondItem="ima-ch-KVK" secondAttribute="bottom" id="Chk-YZ-LCO"/>
+                            <constraint firstAttribute="bottom" secondItem="ima-ch-KVK" secondAttribute="bottom" constant="5" id="Chk-YZ-LCO"/>
                             <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerX" secondItem="hwc-lG-u9Z" secondAttribute="centerX" id="eAq-aY-dGP"/>
                             <constraint firstItem="ima-ch-KVK" firstAttribute="width" secondItem="DnU-HG-Dtl" secondAttribute="width" id="kdT-6K-kwd"/>
                             <constraint firstItem="DnU-HG-Dtl" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="tVx-rF-7sj"/>
