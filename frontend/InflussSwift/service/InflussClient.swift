@@ -26,3 +26,15 @@ extension InflussClient: LooperDelegate {
         messageService.getMessages(withCompletion: processMessages)
     }
 }
+
+extension InflussClient: Pausable {
+
+    func suspend() {
+        messageFetcher.suspend()
+    }
+    
+    func resume() {
+        messageFetcher.resume()
+    }
+
+}

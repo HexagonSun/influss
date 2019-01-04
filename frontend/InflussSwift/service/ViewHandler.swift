@@ -59,3 +59,17 @@ extension ViewHandler: LooperDelegate {
         messageIndex = getNextIndex()
     }
 }
+
+extension ViewHandler: Pausable {
+
+    func suspend() {
+        messageUpdater.suspend()
+        client?.suspend()
+    }
+    
+    func resume() {
+        messageUpdater.resume()
+        client?.resume()
+    }
+
+}
