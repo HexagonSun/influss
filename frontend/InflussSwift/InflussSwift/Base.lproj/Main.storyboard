@@ -132,14 +132,14 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="InflussSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <stackView key="view" distribution="fill" orientation="vertical" alignment="leading" spacing="223" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="eH0-HG-Pha">
-                        <rect key="frame" x="0.0" y="0.0" width="496" height="440"/>
+                        <rect key="frame" x="0.0" y="0.0" width="496" height="636"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hwc-lG-u9Z">
-                                <rect key="frame" x="5" y="22" width="486" height="413"/>
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwc-lG-u9Z">
+                                <rect key="frame" x="0.0" y="223" width="496" height="413"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="100" verticalHuggingPriority="100" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-HG-Dtl">
-                                        <rect key="frame" x="42" y="198" width="353" height="73"/>
+                                    <textField horizontalHuggingPriority="100" verticalHuggingPriority="100" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-HG-Dtl">
+                                        <rect key="frame" x="-2" y="198" width="500" height="73"/>
                                         <textFieldCell key="cell" selectable="YES" allowsUndo="NO" alignment="center" title="Multiline Label" id="Hj4-Z3-TEb">
                                             <font key="font" metaFont="system" size="48"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -150,10 +150,11 @@
                                 <constraints>
                                     <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerY" secondItem="hwc-lG-u9Z" secondAttribute="centerY" id="8Uu-Sj-1KK"/>
                                     <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerX" secondItem="hwc-lG-u9Z" secondAttribute="centerX" id="eAq-aY-dGP"/>
+                                    <constraint firstItem="DnU-HG-Dtl" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="tVx-rF-7sj"/>
                                 </constraints>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ch-KVK">
-                                <rect key="frame" x="3" y="0.0" width="490" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="300" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ch-KVK">
+                                <rect key="frame" x="-2" y="5" width="500" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="wix-ba-pCM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -162,13 +163,10 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="leading" secondItem="eH0-HG-Pha" secondAttribute="leading" constant="5" id="1dS-Wo-h8a"/>
-                            <constraint firstItem="hwc-lG-u9Z" firstAttribute="top" secondItem="eH0-HG-Pha" secondAttribute="top" constant="5" id="3pg-BZ-coW"/>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="6jS-pR-3Dv"/>
-                            <constraint firstItem="hwc-lG-u9Z" firstAttribute="leading" secondItem="eH0-HG-Pha" secondAttribute="leading" constant="5" id="DrQ-ck-N1f"/>
-                            <constraint firstAttribute="trailing" secondItem="hwc-lG-u9Z" secondAttribute="trailing" constant="5" id="E7A-ky-7gc"/>
-                            <constraint firstAttribute="trailing" secondItem="ima-ch-KVK" secondAttribute="trailing" constant="5" id="EJT-We-tYJ"/>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="top" secondItem="hwc-lG-u9Z" secondAttribute="bottom" constant="5" id="Gax-Es-Ue9"/>
+                            <constraint firstAttribute="bottom" secondItem="ima-ch-KVK" secondAttribute="bottom" constant="5" id="Q53-cp-y8S"/>
+                            <constraint firstItem="ima-ch-KVK" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="Qgp-XD-oMR"/>
+                            <constraint firstItem="hwc-lG-u9Z" firstAttribute="width" secondItem="eH0-HG-Pha" secondAttribute="width" id="Yqm-sw-4Ga"/>
+                            <constraint firstItem="ima-ch-KVK" firstAttribute="top" secondItem="hwc-lG-u9Z" secondAttribute="bottom" constant="8" symbolic="YES" id="p6K-gZ-9ex"/>
                         </constraints>
                         <visibilityPriorities>
                             <integer value="1000"/>
