@@ -40,6 +40,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="xcU-mX-oLf" id="jUP-Ib-gha"/>
+                        <outlet property="statusLabel" destination="eVi-xn-Jgj" id="zfx-zr-f0q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
