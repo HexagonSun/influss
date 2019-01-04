@@ -21,6 +21,11 @@
 		58A4070C21DF83E6002AE755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070A21DF83E6002AE755 /* Main.storyboard */; };
 		58A4070E21DF83E7002AE755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070D21DF83E7002AE755 /* Assets.xcassets */; };
 		58A4071121DF83E7002AE755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */; };
+		58B53DAA21DFA2E4001D87D5 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26B921DC0D4800B97ED0 /* MessageService.swift */; };
+		58B53DAB21DFA2E4001D87D5 /* InflussClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26BB21DC0DE500B97ED0 /* InflussClient.swift */; };
+		58B53DAC21DFA2E4001D87D5 /* Looper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26BF21DC0F3E00B97ED0 /* Looper.swift */; };
+		58B53DAD21DFA2E4001D87D5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26BD21DC0F1D00B97ED0 /* Message.swift */; };
+		58B53DAE21DFA2E4001D87D5 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A406FE21DF7C74002AE755 /* ViewHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -240,6 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B53DAA21DFA2E4001D87D5 /* MessageService.swift in Sources */,
+				58B53DAB21DFA2E4001D87D5 /* InflussClient.swift in Sources */,
+				58B53DAC21DFA2E4001D87D5 /* Looper.swift in Sources */,
+				58B53DAD21DFA2E4001D87D5 /* Message.swift in Sources */,
+				58B53DAE21DFA2E4001D87D5 /* ViewHandler.swift in Sources */,
 				58A4070921DF83E6002AE755 /* ViewController.swift in Sources */,
 				58A4070721DF83E6002AE755 /* AppDelegate.swift in Sources */,
 			);
