@@ -131,30 +131,20 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="InflussSwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <stackView key="view" distribution="fill" orientation="vertical" alignment="leading" spacing="223" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" id="eH0-HG-Pha">
-                        <rect key="frame" x="0.0" y="0.0" width="496" height="636"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <customView key="view" id="hwc-lG-u9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwc-lG-u9Z">
-                                <rect key="frame" x="0.0" y="223" width="496" height="413"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="100" verticalHuggingPriority="100" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-HG-Dtl">
-                                        <rect key="frame" x="-2" y="198" width="500" height="73"/>
-                                        <textFieldCell key="cell" selectable="YES" allowsUndo="NO" alignment="center" title="Multiline Label" id="Hj4-Z3-TEb">
-                                            <font key="font" metaFont="system" size="48"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerY" secondItem="hwc-lG-u9Z" secondAttribute="centerY" id="8Uu-Sj-1KK"/>
-                                    <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerX" secondItem="hwc-lG-u9Z" secondAttribute="centerX" id="eAq-aY-dGP"/>
-                                    <constraint firstItem="DnU-HG-Dtl" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="tVx-rF-7sj"/>
-                                </constraints>
-                            </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="300" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ch-KVK">
-                                <rect key="frame" x="-2" y="5" width="500" height="17"/>
+                            <textField horizontalHuggingPriority="100" verticalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-HG-Dtl">
+                                <rect key="frame" x="-2" y="122" width="454" height="57"/>
+                                <textFieldCell key="cell" selectable="YES" allowsUndo="NO" alignment="center" title="Multiline Label" id="Hj4-Z3-TEb">
+                                    <font key="font" metaFont="system" size="48"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ch-KVK">
+                                <rect key="frame" x="-2" y="0.0" width="454" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="wix-ba-pCM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -163,20 +153,15 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ima-ch-KVK" secondAttribute="bottom" constant="5" id="Q53-cp-y8S"/>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="Qgp-XD-oMR"/>
-                            <constraint firstItem="hwc-lG-u9Z" firstAttribute="width" secondItem="eH0-HG-Pha" secondAttribute="width" id="Yqm-sw-4Ga"/>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="top" secondItem="hwc-lG-u9Z" secondAttribute="bottom" constant="8" symbolic="YES" id="p6K-gZ-9ex"/>
+                            <constraint firstAttribute="trailing" secondItem="ima-ch-KVK" secondAttribute="trailing" id="12Y-4g-cxp"/>
+                            <constraint firstItem="ima-ch-KVK" firstAttribute="leading" secondItem="DnU-HG-Dtl" secondAttribute="leading" id="3TA-qR-hPf"/>
+                            <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerY" secondItem="hwc-lG-u9Z" secondAttribute="centerY" id="8Uu-Sj-1KK"/>
+                            <constraint firstAttribute="bottom" secondItem="ima-ch-KVK" secondAttribute="bottom" id="Chk-YZ-LCO"/>
+                            <constraint firstItem="DnU-HG-Dtl" firstAttribute="centerX" secondItem="hwc-lG-u9Z" secondAttribute="centerX" id="eAq-aY-dGP"/>
+                            <constraint firstItem="ima-ch-KVK" firstAttribute="width" secondItem="DnU-HG-Dtl" secondAttribute="width" id="kdT-6K-kwd"/>
+                            <constraint firstItem="DnU-HG-Dtl" firstAttribute="width" secondItem="hwc-lG-u9Z" secondAttribute="width" id="tVx-rF-7sj"/>
                         </constraints>
-                        <visibilityPriorities>
-                            <integer value="1000"/>
-                            <integer value="1000"/>
-                        </visibilityPriorities>
-                        <customSpacing>
-                            <real value="3.4028234663852886e+38"/>
-                            <real value="3.4028234663852886e+38"/>
-                        </customSpacing>
-                    </stackView>
+                    </customView>
                     <connections>
                         <outlet property="bottomLabel" destination="wix-ba-pCM" id="YWI-w9-uoU"/>
                         <outlet property="messageLabel" destination="DnU-HG-Dtl" id="h4Z-QY-fIP"/>
