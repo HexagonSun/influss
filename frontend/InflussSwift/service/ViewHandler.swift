@@ -1,28 +1,30 @@
 //import Foundation
 import Cocoa
 
+protocol ViewLabels {
+    func setMessage(_ text: String)
+    func setStatus(_ text: String)
+}
+
 class ViewHandler {
-    
-    let messageControl: NSCell
-    let footerControl: NSCell
+    let viewLabels: ViewLabels
     let updateDelay: TimeInterval = 4
     
     var client : InflussClient? = nil
     var messageUpdater: Looper!
     var messageIndex: Int = 0
     
-    init(messageControl: NSCell, footerControl: NSCell) {
-        self.messageControl = messageControl
-        self.footerControl = footerControl
-        
-        // starting client
+    init(viewLabels: ViewLabels) {
+        self.viewLabels = viewLabels
+
         client = InflussClient()
-        
-        // init
-        messageControl.stringValue = "↻"
-        updateFooter()
-        
+        initLabels()
         messageUpdater = Looper(self.updateDelay, self)
+    }
+    
+    func initLabels() {
+        viewLabels.setMessage("↻")
+        updateFooter()
     }
     
     func updateMessage() {
@@ -31,13 +33,13 @@ class ViewHandler {
             // nothing to do
             return
         }
-        messageControl.stringValue = client?.messages[messageIndex].text ?? "…"
+        viewLabels.setMessage(client?.messages[messageIndex].text ?? "…")
     }
     
     func updateFooter() {
         let messageLength = client?.messages.count ?? 0
         let idx = messageLength == 0 ? "–" : "\(self.messageIndex + 1)"
-        footerControl.stringValue = "\(idx) / \(messageLength)"
+        viewLabels.setStatus("\(idx) / \(messageLength)")
     }
     
     func getNextIndex() -> Int {
