@@ -19,14 +19,6 @@ class Looper {
         timer.invalidate()
     }
     
-    func createTimer() -> Timer {
-        return Timer.scheduledTimer(timeInterval: self.intervalSeconds,
-                                    target: self,
-                                    selector: #selector(timerAction),
-                                    userInfo: nil,
-                                    repeats: true)
-    }
-    
     @objc dynamic func timerAction() {
         self.delegate.apply()
     }
@@ -36,11 +28,22 @@ class Looper {
 extension Looper: Pausable {
 
     func suspend() {
-        timer.invalidate()
+        timer?.invalidate()
+        timer = nil
     }
     
     func resume() {
-        self.timer = createTimer()
+        if (timer == nil) {
+            self.timer = createTimer()
+        }
+    }
+    
+    private func createTimer() -> Timer {
+        return Timer.scheduledTimer(timeInterval: self.intervalSeconds,
+                                    target: self,
+                                    selector: #selector(timerAction),
+                                    userInfo: nil,
+                                    repeats: true)
     }
 
 }
