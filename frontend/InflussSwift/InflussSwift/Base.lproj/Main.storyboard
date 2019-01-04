@@ -169,9 +169,6 @@
                             <constraint firstAttribute="trailing" secondItem="hwc-lG-u9Z" secondAttribute="trailing" constant="5" id="E7A-ky-7gc"/>
                             <constraint firstAttribute="trailing" secondItem="ima-ch-KVK" secondAttribute="trailing" constant="5" id="EJT-We-tYJ"/>
                             <constraint firstItem="ima-ch-KVK" firstAttribute="top" secondItem="hwc-lG-u9Z" secondAttribute="bottom" constant="5" id="Gax-Es-Ue9"/>
-                            <constraint firstItem="hwc-lG-u9Z" firstAttribute="top" secondItem="eH0-HG-Pha" secondAttribute="top" constant="5" id="Pwx-gs-pRR"/>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="top" secondItem="hwc-lG-u9Z" secondAttribute="bottom" constant="5" id="Tcl-gJ-VlT"/>
-                            <constraint firstItem="ima-ch-KVK" firstAttribute="top" secondItem="hwc-lG-u9Z" secondAttribute="bottom" constant="5" id="V7z-0x-Iga"/>
                         </constraints>
                         <visibilityPriorities>
                             <integer value="1000"/>
