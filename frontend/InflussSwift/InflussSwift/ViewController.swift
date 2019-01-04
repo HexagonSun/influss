@@ -4,13 +4,15 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var messageLabel: NSTextFieldCell!
     @IBOutlet weak var bottomLabel: NSTextFieldCell!
-
-    var handler: ViewHandler!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let adapter = MacOsViewLabelAdapter(controller: self)
-        handler = ViewHandler(viewLabels: adapter)
+        let handler = ViewHandler(viewLabels: adapter)
+        appDelegate.viewHandler = handler
+    }
+    var appDelegate:AppDelegate {
+        return NSApplication.shared.delegate as! AppDelegate
     }
 
 }
