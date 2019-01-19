@@ -1,9 +1,13 @@
 import Foundation
 
 class MessageService {
-    // TODO: get apiKey from .. somewhere? settings? keychain? env-var?
-    let apiEndpoint = ""
-    let apiKey = ""
+
+    var apiEndpoint = ""
+    var apiKey = ""
+
+    init() {
+        self.setupPreferencesListener()
+    }
 
     func getMessages(withCompletion completion: @escaping ([Message]?) -> Void) {
         let url:URL = URL(string: "\(apiEndpoint)/messages")!
@@ -42,6 +46,24 @@ class MessageService {
         return completion(nil)
     }
     
+}
+
+extension MessageService {
+    func setupPreferencesListener() {
+        NotificationCenter.default.addObserver(forName: .influssPreferencesChanged, object: nil, queue: nil) {
+            (notification) in self.updateFromPreferences(notification)
+        }
+    }
+
+    func updateFromPreferences(_ notification: Notification) {
+        guard notification.object is Preferences else {
+            return
+        }
+        let preferences: Preferences = notification.object as! Preferences
+        
+        self.apiEndpoint = preferences.apiEndpoint
+        self.apiKey = preferences.apiKey
+    }
 }
 
 // add support for ISO-8601 with fractional seconds
