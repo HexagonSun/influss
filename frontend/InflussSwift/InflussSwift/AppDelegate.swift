@@ -4,15 +4,10 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var viewHandler: ViewHandler? = nil
+    var preferencesHandler: PreferencesHandler? = nil
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        self.preferencesHandler = PreferencesHandler()
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
 
 }
-
