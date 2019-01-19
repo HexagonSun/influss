@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
         self.preferencesHandler = PreferencesHandler()
+        self.preferencesHandler!.publish()
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
