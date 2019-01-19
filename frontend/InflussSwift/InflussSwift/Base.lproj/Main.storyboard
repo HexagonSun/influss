@@ -22,7 +22,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="Iqm-VA-0BV" kind="modal" id="NMq-9c-gdH"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Hide InflussSwift" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
@@ -104,7 +108,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="76" y="-114"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -127,16 +131,49 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="2WZ-wd-KHG">
+            <objects>
+                <windowController id="Iqm-VA-0BV" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="up8-wq-lSR">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="196" y="249" width="416" height="214"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <connections>
+                            <outlet property="delegate" destination="Iqm-VA-0BV" id="vcS-Ts-mzY"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="rns-Ky-4rA" kind="relationship" relationship="window.shadowedContentViewController" id="YDl-rm-swI"/>
+                    </connections>
+                </windowController>
+                <customObject id="Koe-uw-7Rx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="250"/>
+        </scene>
+        <!--Preferences View Controller-->
+        <scene sceneID="sGC-Nl-9l8">
+            <objects>
+                <viewController id="rns-Ky-4rA" customClass="PreferencesViewController" customModule="InflussSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="KMP-Ax-1gO">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="214"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="fwb-aL-pW5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="688"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="InflussSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <customView key="view" id="hwc-lG-u9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField horizontalHuggingPriority="100" verticalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-HG-Dtl">
-                                <rect key="frame" x="-2" y="122" width="454" height="57"/>
+                                <rect key="frame" x="-2" y="122" width="484" height="57"/>
                                 <textFieldCell key="cell" selectable="YES" allowsUndo="NO" alignment="center" title="Multiline Label" id="Hj4-Z3-TEb">
                                     <font key="font" metaFont="system" size="48"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -144,7 +181,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ch-KVK">
-                                <rect key="frame" x="-2" y="5" width="454" height="17"/>
+                                <rect key="frame" x="-2" y="5" width="484" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="wix-ba-pCM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -169,7 +206,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="761"/>
+            <point key="canvasLocation" x="75" y="688"/>
         </scene>
     </scenes>
 </document>

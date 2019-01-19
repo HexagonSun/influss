@@ -27,6 +27,9 @@
 		58B53DAC21DFA2E4001D87D5 /* Looper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26BF21DC0F3E00B97ED0 /* Looper.swift */; };
 		58B53DAD21DFA2E4001D87D5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580B26BD21DC0F1D00B97ED0 /* Message.swift */; };
 		58B53DAE21DFA2E4001D87D5 /* ViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A406FE21DF7C74002AE755 /* ViewHandler.swift */; };
+		58CDBED521F35F1000CF1E35 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDBED421F35F1000CF1E35 /* Preferences.swift */; };
+		58CDBED621F35F4B00CF1E35 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDBED421F35F1000CF1E35 /* Preferences.swift */; };
+		58CDBED821F361DE00CF1E35 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDBED721F361DE00CF1E35 /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,8 @@
 		58A4070B21DF83E6002AE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58A4071021DF83E7002AE755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58A4071221DF83E7002AE755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58CDBED421F35F1000CF1E35 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		58CDBED721F361DE00CF1E35 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			children = (
 				584BA69821DFC2A80003A06B /* Pausable.swift */,
 				580B26B921DC0D4800B97ED0 /* MessageService.swift */,
+				58CDBED421F35F1000CF1E35 /* Preferences.swift */,
 				580B26BB21DC0DE500B97ED0 /* InflussClient.swift */,
 				580B26BF21DC0F3E00B97ED0 /* Looper.swift */,
 				580B26BD21DC0F1D00B97ED0 /* Message.swift */,
@@ -107,6 +113,7 @@
 			children = (
 				586E384E21DA2307005943DB /* AppDelegate.swift */,
 				586E385021DA2307005943DB /* ViewController.swift */,
+				58CDBED721F361DE00CF1E35 /* PreferencesViewController.swift */,
 				586E385421DA2308005943DB /* Main.storyboard */,
 				586E385721DA2308005943DB /* Info.plist */,
 				586E385821DA2308005943DB /* InflussSwift.entitlements */,
@@ -244,9 +251,11 @@
 				580B26C021DC0F3E00B97ED0 /* Looper.swift in Sources */,
 				580B26BE21DC0F1D00B97ED0 /* Message.swift in Sources */,
 				580B26BA21DC0D4800B97ED0 /* MessageService.swift in Sources */,
+				58CDBED821F361DE00CF1E35 /* PreferencesViewController.swift in Sources */,
 				58A406FF21DF7C74002AE755 /* ViewHandler.swift in Sources */,
 				584BA69921DFC2A80003A06B /* Pausable.swift in Sources */,
 				586E384F21DA2307005943DB /* AppDelegate.swift in Sources */,
+				58CDBED521F35F1000CF1E35 /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +271,7 @@
 				58A4070921DF83E6002AE755 /* ViewController.swift in Sources */,
 				584BA69A21DFC2A80003A06B /* Pausable.swift in Sources */,
 				58A4070721DF83E6002AE755 /* AppDelegate.swift in Sources */,
+				58CDBED621F35F4B00CF1E35 /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
