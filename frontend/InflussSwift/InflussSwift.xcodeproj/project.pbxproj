@@ -32,6 +32,7 @@
 		58CDBED821F361DE00CF1E35 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDBED721F361DE00CF1E35 /* PreferencesViewController.swift */; };
 		58CDBEDF21F3761A00CF1E35 /* PreferencesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDBEDE21F3761A00CF1E35 /* PreferencesHandler.swift */; };
 		58CDBEE021F3761A00CF1E35 /* PreferencesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CDBEDE21F3761A00CF1E35 /* PreferencesHandler.swift */; };
+		58CDBEE221F380C800CF1E35 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58CDBEE121F380C800CF1E35 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		58CDBED421F35F1000CF1E35 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		58CDBED721F361DE00CF1E35 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		58CDBEDE21F3761A00CF1E35 /* PreferencesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesHandler.swift; sourceTree = "<group>"; };
+		58CDBEE121F380C800CF1E35 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				58A4070A21DF83E6002AE755 /* Main.storyboard */,
 				58A4070F21DF83E7002AE755 /* LaunchScreen.storyboard */,
 				58A4071221DF83E7002AE755 /* Info.plist */,
+				58CDBEE121F380C800CF1E35 /* Settings.bundle */,
 			);
 			path = InflussSwiftApp;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58A4071121DF83E7002AE755 /* LaunchScreen.storyboard in Resources */,
+				58CDBEE221F380C800CF1E35 /* Settings.bundle in Resources */,
 				58A4070C21DF83E6002AE755 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
