@@ -205,6 +205,9 @@
 Gw
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onCancel:" target="rns-Ky-4rA" id="sVV-9d-xjE"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSm-I8-Jv4">
                                 <rect key="frame" x="343" y="13" width="59" height="32"/>
@@ -224,6 +227,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="apiEndpointInput" destination="RJU-tG-FWJ" id="sXz-Wa-zOH"/>
+                        <outlet property="apiKeyInput" destination="31i-vf-ULj" id="Mbw-mb-zlv"/>
                     </connections>
                 </viewController>
                 <customObject id="fwb-aL-pW5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
