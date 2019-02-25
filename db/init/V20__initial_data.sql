@@ -12,7 +12,7 @@ INSERT INTO MESSAGE (TEXT, VALID_FROM, INVALID_FROM, AUTHOR, CREATED_AT, MODIFIE
 	SELECT
 		msg,
 		date(date '2018-11-01' + trunc(random()  * 20) * '1 day'::interval),
-		date(date '2019-01-01' + trunc(random()  * 20) * '1 day'::interval),
+		date(date '2019-02-25' + trunc(random()  * 20) * '1 day'::interval),
 		'HexagonSun',
 		NOW(),
 		NOW(),
